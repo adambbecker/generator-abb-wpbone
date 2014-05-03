@@ -25,13 +25,13 @@ $ npm install -g yo
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-abb-wpbone from npm, run:
+To install generator-abb-wptheme, first cd to the `generator-abb-wptheme` directory and then:
 
 ```
-$ npm install -g generator-abb-wpbone
+$ npm link
 ```
 
-Finally, initiate the main generator:
+That will allow you to use the generator from any directory and then finally, initiate the main generator:
 
 ```
 $ yo abb-wpbone
