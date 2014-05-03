@@ -1,0 +1,36 @@
+{
+  "name": "generator-abb-wpbone",
+  "version": "0.0.0",
+  "description": "WordPress (Backbone based) theme generator for Yeoman",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "adambbecker/generator-abb-wpbone",
+  "author": {
+    "name": "Adam Becker",
+    "email": "adambbecker@gmail.com",
+    "url": "https://github.com/adambbecker"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.2.10"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.1.2"
+  }
+}
