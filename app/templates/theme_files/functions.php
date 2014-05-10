@@ -121,7 +121,7 @@ function <%= _.slugify(fnPrefix) %>_enqueues() {
 
 	/* Stylesheets ---------------------------------------------------------------*/
 	wp_enqueue_style('<%= _.slugify(fnPrefix) %>_style', get_stylesheet_uri());
-	wp_enqueue_style('<%= _.slugify(fnPrefix) %>_main', get_template_directory_uri() . '/app/main.css');
+	wp_enqueue_style('<%= _.slugify(fnPrefix) %>_main', get_template_directory_uri() . '/app/styles/main.css');
 	// wp_enqueue_style('customcss', get_template_directory_uri() . '/dist/styles/custom.css');
 
 	/* Javascript - registers ----------------------------------------------------*/
