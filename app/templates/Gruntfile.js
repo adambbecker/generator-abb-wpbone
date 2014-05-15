@@ -29,11 +29,17 @@ module.exports = function (grunt) {
         files: ['<%%= yeoman.app %>/styles/{,*/}*.scss'],
         tasks: ['sass', 'autoprefixer']
       },
-      jst: {
+      // jst: {
+      //   files: [
+      //     '<%%= yeoman.app %>/scripts/templates/*.ejs'
+      //   ],
+      //   tasks: ['jst']
+      // },
+      handlebars: {
         files: [
-          '<%%= yeoman.app %>/scripts/templates/*.ejs'
+          '<%%= yeoman.app %>/scripts/templates/*.hbs'
         ],
-        tasks: ['jst']
+        tasks: ['handlebars']
       },
       'footer-inc': {
         files: ['<%%= yeoman.app %>/footer_include.php'],
@@ -100,10 +106,21 @@ module.exports = function (grunt) {
       }
     },
 
-    jst: {
+    // jst: {
+    //   compile: {
+    //     files: {
+    //       '<%%= yeoman.app %>/scripts/templates.js': ['<%%= yeoman.app %>/scripts/templates/*.ejs']
+    //     }
+    //   }
+    // },
+
+    handlebars: {
       compile: {
+        options: {
+          namespace: 'JST'
+        },
         files: {
-          '<%%= yeoman.app %>/scripts/templates.js': ['<%%= yeoman.app %>/scripts/templates/*.ejs']
+          '<%%= yeoman.app %>/scripts/templates.js': ['<%%= yeoman.app %>/scripts/templates/*.hbs']
         }
       }
     },
@@ -244,7 +261,8 @@ module.exports = function (grunt) {
     'clean:dist',
     'modernizr',
     'createDefaultTemplate',
-    'jst',
+    // 'jst',
+    'handlebars',
     'useminPrepare',
     'sass',
     'autoprefixer',
@@ -259,6 +277,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'build'
+    'watch'
   ]);
 };

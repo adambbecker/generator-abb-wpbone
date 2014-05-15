@@ -18,9 +18,9 @@ function Generator() {
 util.inherits(Generator, scriptBase);
 
 Generator.prototype.createViewFiles = function createViewFiles() {
-  this.jst_path = this.env.options.appPath + '/scripts/templates/' + this.name + '.ejs';
+  this.jst_path = this.env.options.appPath + '/scripts/templates/' + this.name + '.hbs';
 
-  this.template('view.ejs', this.jst_path);
+  this.template('view.hbs', this.jst_path);
 
   this.writeTemplate('view', path.join(this.env.options.appPath + '/scripts/views', this.name));
 
