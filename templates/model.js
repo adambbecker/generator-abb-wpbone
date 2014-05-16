@@ -9,16 +9,16 @@
 
       url: '',
 
-      initialize: function() {
-
-      },
-
       defaults: {
 
       },
 
+      initialize: function() {
+
+      },
+
       validate: function(attrs, options) {
-        
+
       },
 
       parse: function(response, options)  {
