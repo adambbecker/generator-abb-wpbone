@@ -10,12 +10,15 @@
       url: '',
 
       initialize: function() {
+
       },
 
       defaults: {
+
       },
 
       validate: function(attrs, options) {
+        
       },
 
       parse: function(response, options)  {
