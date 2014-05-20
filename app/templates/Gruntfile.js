@@ -29,12 +29,6 @@ module.exports = function (grunt) {
         files: ['<%%= yeoman.app %>/styles/{,*/}*.scss'],
         tasks: ['sass', 'autoprefixer']
       },
-      // jst: {
-      //   files: [
-      //     '<%%= yeoman.app %>/scripts/templates/*.ejs'
-      //   ],
-      //   tasks: ['jst']
-      // },
       handlebars: {
         files: [
           '<%%= yeoman.app %>/scripts/templates/*.hbs'
@@ -105,14 +99,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
-    // jst: {
-    //   compile: {
-    //     files: {
-    //       '<%%= yeoman.app %>/scripts/templates.js': ['<%%= yeoman.app %>/scripts/templates/*.ejs']
-    //     }
-    //   }
-    // },
 
     handlebars: {
       compile: {
@@ -261,7 +247,6 @@ module.exports = function (grunt) {
     'clean:dist',
     'modernizr',
     'createDefaultTemplate',
-    // 'jst',
     'handlebars',
     'useminPrepare',
     'sass',
