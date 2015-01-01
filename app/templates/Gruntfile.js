@@ -207,7 +207,9 @@ module.exports = function (grunt) {
             replacement: function (match, p1, offset, string) {
               var dirMap = p1.split('/');
               var preStr = (dirMap[dirMap.length-2] == 'scripts' || dirMap[0] == 'bower_components') ? '' : dirMap[dirMap.length-2] + '_';
-              return 'wp_enqueue_script(\'' + preStr + dirMap.pop().split('.')[0] + '\', get_template_directory_uri() . \'/' + yeomanConfig.app + '/' + p1 + '\', array(), \'\', true);';
+              var scriptFileName = dirMap.pop().split('.');
+              scriptFileName.pop();
+              return 'wp_enqueue_script(\'' + preStr + scriptFileName.join('-') + '\', get_template_directory_uri() . \'/' + yeomanConfig.app + '/' + p1 + '\', array(), \'\', true);';
             }
           },{
             pattern: '<?php ?>',
